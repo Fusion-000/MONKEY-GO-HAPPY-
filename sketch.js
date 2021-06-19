@@ -51,6 +51,8 @@ text("Survival Time =  "+Math.round(frameCount/20),200,100);
 if (monkey.isTouching(obstacleGroup)){
   ground.velocityX = 0;
   FoodGroup.velocityXEach = 0;
+  obstacleGroup.velocityXEach = 0;
+  monkey.addAnimation("sprite_0.png");
 }
 drawSprites();
 }
