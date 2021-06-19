@@ -46,6 +46,7 @@ text("Survival Time =  "+Math.round(frameCount/20),200,100);
   monkey.velocityY = monkey.velocityY + 0.5;
   
   monkey.collide(ground);
+  monkey.collide(obstacleGroup);
   spawnFood();
   spawnObstacles();
 if (monkey.isTouching(obstacleGroup)){
