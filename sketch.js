@@ -4,6 +4,47 @@ var banana ,bananaImage, obstacle, obstacleImage
 var FoodGroup, obstacleGroup
 var score
 
+function spawnFood() {
+  //write code here to spawn the clouds
+  if (frameCount % 80 === 0) {
+    var banana = createSprite(400,150,40,10);
+    banana.addImage(bananaImage);
+    banana.scale = 0.1;
+    banana.velocityX = -3;
+    
+     //assign lifetime to the variable
+    banana.lifetime = 200;
+    
+    //adjust the depth
+         
+    
+    //add each cloud to the group
+    FoodGroup.add(banana);
+  }
+  
+}
+
+function spawnObstacles() {
+  //write code here to spawn the clouds
+  if (frameCount % 240 === 0) {
+    var obstacle = createSprite(300,330,40,10);
+   
+    obstacle.addImage(obstacleImage);
+    obstacle.scale = 0.1;
+    obstacle.velocityX = -3;
+    
+     //assign lifetime to the variable
+    obstacle.lifetime = 200;
+    
+    //adjust the depth
+    
+    
+    //add each cloud to the group
+    obstacleGroup.add(obstacle);
+  }
+  
+}
+
 function preload(){
   
   
@@ -58,46 +99,6 @@ if(ObstacleGroup.isTouching(monkey)){
 drawSprites();
 }
 
-function spawnFood() {
-  //write code here to spawn the clouds
-  if (frameCount % 80 === 0) {
-    var banana = createSprite(400,150,40,10);
-    banana.addImage(bananaImage);
-    banana.scale = 0.1;
-    banana.velocityX = -3;
-    
-     //assign lifetime to the variable
-    banana.lifetime = 200;
-    
-    //adjust the depth
-         
-    
-    //add each cloud to the group
-    FoodGroup.add(banana);
-  }
-  
-}
-
-function spawnObstacles() {
-  //write code here to spawn the clouds
-  if (frameCount % 240 === 0) {
-    var obstacle = createSprite(300,330,40,10);
-   
-    obstacle.addImage(obstacleImage);
-    obstacle.scale = 0.1;
-    obstacle.velocityX = -3;
-    
-     //assign lifetime to the variable
-    obstacle.lifetime = 200;
-    
-    //adjust the depth
-    
-    
-    //add each cloud to the group
-    obstacleGroup.add(obstacle);
-  }
-  
-}
 
 
 
